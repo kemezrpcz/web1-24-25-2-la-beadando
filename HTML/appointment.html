@@ -3,18 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Időpont foglalás</title>
+    <title>Időpontfoglalás</title>
     <link rel="stylesheet" href="/CSS/main.css">
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="/CSS/appointment.css">
+  </head>
 <body>
-    <header></header>
+    <header>Fodrászat és Szépségszalon</header>
 
-    <nav></nav>
+    <nav>
+        <a href="/HTML/home.html">Kezdőlap</a>
+        <a href="/HTML/services.html">Szolgáltatások</a>
+        <a href="/HTML/prices.html">Árak</a>
+        <a href="/HTML/appointment.html" class="activePage">Időpontfoglalás</a>
+        <a href="/HTML/about.html">Rólunk</a>
+    </nav>
 
-    <main></main>
+    <main>
+        <form onsubmit="event.preventDefault()">
+            <label for="name">Név</label>
+            <input type="text" id="name" autocomplete="off" required>
 
-    <footer></footer>
+            <label for="email">Email</label>
+            <input type="email" id="email" autocomplete="off" required>
+
+            <label for="service">Szolgáltatás kiválasztása</label>
+            <select id="service" required>
+                <optgroup label="Fodrászat - Alap">
+                  <option value="mHair">Hajvágás - férfi</option>
+                  <option value="fHair">Hajvágás - női</option>
+                  <option value="cHair">Hajvágás - gyerek</option>
+                </optgroup>
+              
+                <optgroup label="Fodrászat - Festés és formázás">
+                  <option value="fullColor">Hajfestés - teljes</option>
+                  <option value="color">Hajfestés - tőfestés</option>
+                  <option value="melir">Melír készítése</option>
+                  <option value="straightening">Hajvasalás</option>
+                  <option value="styling">Hajformázás / beszárítás</option>
+                </optgroup>
+              
+                <optgroup label="Fodrászat - Kiegészítő kezelések">
+                  <option value="scalp">Fejbőrmasszázs</option>
+                  <option value="beard">Szakáll igazítás</option>
+                  <option value="shaving">Borotválás - hagyományos</option>
+                  <option value="hairFix">Hajszerkezet javító kezelés</option>
+                  <option value="wrap">Hajpakolás (hidratáló)</option>
+                </optgroup>
+              
+                <optgroup label="Kéz- és lábápolás">
+                  <option value="manicure">Manikűr - klasszikus</option>
+                  <option value="manicureGel">Manikűr - gél lakkozás</option>
+                  <option value="pedicure">Pedikűr - esztétikai</option>
+                  <option value="pedicureMedical">Pedikűr - gyógypedikűr</option>
+                </optgroup>
+              
+                <optgroup label="Arcápolás és smink">
+                  <option value="facecare">Arcápolás - hidratáló kezelés</option>
+                  <option value="facecareClear">Arcápolás - tisztító kezelés</option>
+                  <option value="makeup">Smink - nappali</option>
+                  <option value="makeupCasual">Smink - alkalmi</option>
+                </optgroup>
+              
+                <optgroup label="Szem és szempilla kezelések">
+                  <option value="eyebrow">Szemöldök formázás</option>
+                  <option value="eyebrowColor">Szemöldök festés</option>
+                  <option value="eyelash ">Szempilla lifting</option>
+                </optgroup>
+              
+                <optgroup label="Csomagajánlat">
+                  <option value="fullPackage">Teljes átalakítás csomag</option>
+                </optgroup>
+              </select>
+
+              <label>Időpontfoglalás</label>
+              <input type="text" id="date" required>
+              <input type="text" id="time" required>
+
+              <label for="more">Megjegyzés</label>
+              <textarea name="more" id="more"></textarea>
+
+              <input id="booking" type="submit" value="Időpont lefoglalása">
+
+        </form>
+    </main>
+
+    <footer>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aliquam, qui enim culpa corrupti dolore quaerat. Reiciendis reprehenderit suscipit quidem, quos atque autem temporibus consectetur, eveniet quod debitis quia ipsa!</h4>
+    </footer>
 
     <script src="/JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/hu.js"></script>
+    <script src="/JS/appointment.js" type="module"></script>
 </body>
 </html>
