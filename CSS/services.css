@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+th{
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+td {
+    padding: 25px;
+    text-align: center;
+}

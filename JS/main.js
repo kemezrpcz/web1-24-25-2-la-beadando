@@ -1,15 +1,29 @@
-function adjustFooter() {
+addEventListener("DOMContentLoaded", () => {
     const footer = document.querySelector("footer");
-    const main = document.querySelector("main");
-    
-    if (document.body.scrollHeight > window.innerHeight) {
-        footer.style.position = "relative"; // Tartalom hosszú -> normál helyen marad
-        footer.style.top = "auto";
-    } else {
-        footer.style.position = "absolute"; // Tartalom rövid -> kilóg
-        footer.style.top = "100%";
-    }
-}
+    if (footer) {
+        const div1 = document.createElement("div");
+        div1.id = "d1";
+        const div2 = document.createElement("div");
+        div2.id = "d2";
 
-window.addEventListener("load", adjustFooter);
-window.addEventListener("resize", adjustFooter);
+        const p1 = document.createElement("h4");
+        p1.textContent = "Készítette:";
+        div1.appendChild(p1);
+
+        const p2 = document.createElement("p");
+        p2.textContent = "Tari Gergely - K1L4WM";
+        div1.appendChild(p2);
+
+        const p3 = document.createElement("h4");
+        p3.textContent = "Képek forrása:";
+        div2.appendChild(p3);
+        
+        const a = document.createElement("a");
+        a.textContent = "pexels.com";
+        a.href = "https://www.pexels.com/";
+        div2.appendChild(a);
+
+        footer.appendChild(div1);
+        footer.appendChild(div2);
+    }
+})

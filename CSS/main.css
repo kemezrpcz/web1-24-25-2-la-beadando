@@ -2,32 +2,38 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
-    color: white;
-    background-color: black;
+    color: #493628;
+    background-color: #D6C0B3;
 }
 
 /*      HEADER      */
 
 header {
     display: flex;
-    border: 2px solid white;
+    /*border: 2px solid white;*/
     width: 100%;
-    height: 150px;
+    height: 450px;
     text-align: left;
     align-items: center;
-    padding: 10px;
-    font-size: 40px;
+    padding-left: 100px;
+    font-size: 5em;
     font-weight: bold;
+    text-shadow: 1px 1px 1px whitesmoke, -1px -1px 1px whitesmoke;
+    background-image: url(/IMG/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left -150px;
 }
 
 /*      NAV     */
 
 nav {
     display: flex;
+    font-size: 1.5em;
     /*border: 2px solid white;*/
 }
 
@@ -39,15 +45,19 @@ nav a {
     align-items: center;
     flex: 1;
     text-decoration: none;
-    border: 2px solid white;
+    border: 2px solid #E4E0E1;
     padding: 10px;
     background-color: inherit;
+}
+
+nav a:hover {
+    background-color: #AB886D;
 }
 
 nav .activePage {
     text-decoration: none;
     color: inherit;
-    background-color: grey;
+    background-color: #AB886D;
     font-weight: bold;
 }
 
@@ -57,10 +67,39 @@ nav .activePage {
 /*      FOOTER      */
 
 footer {
-    position: absolute;
     display: flex;
-    bottom: 0;
-    top: 100%;
-    border: 2px solid white;
-    height: 100px;
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 5px solid #E4E0E1;
+    padding: 25px;
+    color: #493628;
+    background-color: #AB886D;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+footer div a {
+    color: #493628;
+    background-color: #dab5a0;
+    text-decoration: none;
+    padding: 6px;
+    border: 2px solid #E4E0E1;
+    border-radius: 12px;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+}
+
+footer div a:hover {
+    color: #E4E0E1;
+    background-color: #493628;
 }
