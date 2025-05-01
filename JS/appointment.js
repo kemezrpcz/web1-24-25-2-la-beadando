@@ -51,7 +51,9 @@ btnBooking.addEventListener("click", () => {
 
 function validate() {
   if (name.value.trim() === "") return "A név megadása kötelező!";
+  if (name.value.trim().length < 10) return "A név legalább 10 karakter hosszú legyen!";
   if (email.value.trim() === "") return "Az email megadása kötelező!";
+  if (email.value.trim().length < 10) return "Az email legalább 10 karakter hosszú legyen!";
   if (!email.value.includes("@")) return "Az email cím érvénytelen!";
   if (date.value === "") return "Kérlek válassz dátumot!";
   if (time.value === "") return "Kérlek válassz időpontot!";
