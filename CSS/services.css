@@ -5,12 +5,27 @@ main {
     margin: 50px;
 }
 
+table {
+    border-collapse: collapse;
+    cursor: default;
+    box-shadow: 5px 5px 25px 5px rgba(73, 54, 40, 0.3);
+}
+
 th{
-    padding: 15px;
+    padding: 30px;
     font-size: 1.2em;
+    background-color: #AB886D;
+}
+
+tr {
+    border: 2px solid #E4E0E1;
 }
 
 td {
     padding: 25px;
     text-align: center;
+}
+
+tbody tr:hover {
+    background-color: #AB886D;
 }

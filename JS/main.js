@@ -2,9 +2,7 @@ addEventListener("DOMContentLoaded", () => {
     const footer = document.querySelector("footer");
     if (footer) {
         const div1 = document.createElement("div");
-        div1.id = "d1";
         const div2 = document.createElement("div");
-        div2.id = "d2";
 
         const p1 = document.createElement("h4");
         p1.textContent = "Készítette:";
@@ -21,6 +19,8 @@ addEventListener("DOMContentLoaded", () => {
         const a = document.createElement("a");
         a.textContent = "pexels.com";
         a.href = "https://www.pexels.com/";
+        a.target = "blank";
+        a.rel = "noopener noreferrer";
         div2.appendChild(a);
 
         footer.appendChild(div1);
